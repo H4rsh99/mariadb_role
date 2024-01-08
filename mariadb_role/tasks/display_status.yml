@@ -1,0 +1,5 @@
+---
+
+- name: Display MariaDB status
+  debug:
+    msg: "MariaDB service status: {{ mariadb_status.stdout }}"

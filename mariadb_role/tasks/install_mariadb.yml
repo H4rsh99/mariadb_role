@@ -1,0 +1,6 @@
+---
+
+- name: Install MariaDB
+  win_package:
+    path: "{{ mariadb_install_folder }}/mariadb-11.4.0-winx64.msi"
+    state: present

@@ -1,0 +1,10 @@
+---
+
+- name: Mariadb service creation
+  win_shell: |
+    $serviceName = "{{ mariadb_service_name }}"
+    $binaryPath = '{{ mariadb_binary_path }}'
+    $displayName = "{{ mariadb_display_name }}"
+    New-Service -Name $serviceName -BinaryPathName $binaryPath -DisplayName $displayName -StartupType Automatic
+  register: mariadb_status
+  ignore_errors: true

@@ -1,0 +1,7 @@
+---
+
+- name: Start MariaDB service
+  win_service:
+    name: "{{ mariadb_service_name }}"
+    state: started
+  ignore_errors: true

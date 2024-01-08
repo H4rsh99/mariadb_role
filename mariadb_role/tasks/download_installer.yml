@@ -1,0 +1,5 @@
+---
+- name: Download MariaDB installer
+  win_get_url:
+    url: "{{ mariadb_installer_url }}"
+    dest: "{{ mariadb_install_folder }}"

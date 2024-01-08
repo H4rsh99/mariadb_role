@@ -1,0 +1,7 @@
+---
+
+- name: Create directory structure
+  win_file:
+    path: "{{ mariadb_install_folder }}"
+    state: directory
+

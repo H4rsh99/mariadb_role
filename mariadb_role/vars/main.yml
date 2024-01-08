@@ -1,0 +1,11 @@
+---
+# vars file for mariadb_role
+
+
+mariadb_version: "11.4.0"
+mariadb_install_folder: "C:\\Temp\\folder1\\maria"
+mariadb_installer_url: "https://mirrors.aliyun.com/mariadb/mariadb-{{ mariadb_version }}/winx64-packages/mariadb-{{ mariadb_version }}-winx64.msi"
+mariadb_service_name: "demo11"
+mariadb_binary_path: '\"C:\\Program Files\\MariaDB {{ mariadb_version }}\\bin\\mysqld.exe\" --defaults-file=\"C:\\Program Files\\MariaDB {{ mariadb_version }}\\data\\my.ini\"' 
+mariadb_display_name: "demo11"
+

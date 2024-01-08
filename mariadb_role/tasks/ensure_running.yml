@@ -1,0 +1,5 @@
+---
+
+- name: Ensure MariaDB is running
+  win_shell: Get-Service "{{ mariadb_service_name }}" | Select-Object -Property Status
+  register: mariadb_status

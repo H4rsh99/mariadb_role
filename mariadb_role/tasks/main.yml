@@ -1,0 +1,50 @@
+---
+# tasks/main.yml
+
+- include_tasks: create_directory.yml
+- include_tasks: download_installer.yml
+- include_tasks: install_mariadb.yml
+- include_tasks: create_service.yml
+- include_tasks: start_service.yml
+- include_tasks: ensure_running.yml
+- include_tasks: display_status.yml
+
+#- name: Create directory structure
+#  win_file:
+#    path: "{{ mariadb_install_folder }}"
+#    state: directory
+#
+#
+#- name: Download MariaDB installer
+#  win_get_url:
+#    url: "{{ mariadb_installer_url }}"
+#    dest: "{{ mariadb_install_folder }}"
+
+#- name: Install MariaDB
+#  win_package:
+#    path: "{{ mariadb_install_folder }}/mariadb-11.4.0-winx64.msi"
+#    state: present
+#
+#- name: Mariadb service creation
+#  win_shell: |
+#    $serviceName = "{{ mariadb_service_name }}"
+#    $binaryPath = '{{ mariadb_binary_path }}'
+#    $displayName = "{{ mariadb_display_name }}"
+#    New-Service -Name $serviceName -BinaryPathName $binaryPath -DisplayName $displayName -StartupType Automatic
+#  register: mariadb_status
+#  ignore_errors: true 
+  
+#- name: Start MariaDB service
+#  win_service:
+#    name: "{{ mariadb_service_name }}"
+#    state: started
+#  ignore_errors: true
+#
+#- name: Ensure MariaDB is running
+#  win_shell: Get-Service "{{ mariadb_service_name }}" | Select-Object -Property Status
+#  register: mariadb_status
+#
+#- name: Display MariaDB status
+#  debug:
+#    msg: "MariaDB service status: {{ mariadb_status.stdout }}"
+#
