@@ -38,6 +38,9 @@ To execute the role, use the following command:
 
 "ansible-playbook -i tests/inventory tests/test.yml"
 
+![Screenshot from 2024-01-08 20-23-35](https://github.com/H4rsh99/mariadb_role/assets/91564266/e07b0cc5-638b-43ed-bbbf-b5d7619e57f0)
+
+
 License
 -------
 
